@@ -1,9 +1,38 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
+
+  String namePlace;
+  int stars;
+  String descriptionPlace;
+
+  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+
+    final star_half = Container(
+      margin: EdgeInsets.only(
+          top: 323.0,
+          right: 3.0
+      ),
+      child: Icon(
+          Icons.star_half,
+          color: Color(0xFFf2c611)
+      ),
+    );
+
+    final star_border = Container(
+      margin: EdgeInsets.only(
+          top: 323.0,
+          right: 3.0
+      ),
+      child: Icon(
+          Icons.star_border,
+          color: Color(0xFFf2c611)
+      ),
+    );
+
     final star = Container(
      margin: EdgeInsets.only(
        top: 323.0,
@@ -22,7 +51,7 @@ class DescriptionPlace extends StatelessWidget {
         right: 45.0
       ),
       child: Text(
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, saepe laudantium corporis velit aut necessitatibus vero itaque fuga similique, cum consectetur dignissimos id. Fugiat vero eos optio harum cum ratione.",
+        descriptionPlace,
         style: TextStyle(
           fontSize: 18.0
         )
@@ -38,7 +67,7 @@ class DescriptionPlace extends StatelessWidget {
             right: 20.0
           ),
           child: Text(
-            "Duwilli Ella",
+            namePlace,
             style: TextStyle(
               fontSize: 30.0,
               fontWeight: FontWeight.w900,
@@ -52,7 +81,7 @@ class DescriptionPlace extends StatelessWidget {
             star,
             star,
             star,
-            star
+            star_border
           ],
         )
       ],
